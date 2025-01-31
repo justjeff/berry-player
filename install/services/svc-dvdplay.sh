@@ -16,4 +16,9 @@ SERVICE_FILE_PATH="/etc/systemd/system/dvd-play.service"
 # Generate file
 echo "$SERVICE_FILE_CONTENT" | sudo tee "$SERVICE_FILE_PATH" > /dev/null
 
+# Set up DVD rules to start/stop service when disk is inserted
 sudo cp ~/.local/share/berry-player/etc/udev/rules.d/90-dvd.rules /etc/udev/rules.d/
+
+# Configure config.txt using berry-player defaults
+[ -f "/boot/firmware/config.txt" ] && sudo mv /boot/firmware/config.txt /boot/firmware/cmdline.txt.bak
+sudo cp ~/.local/share/berry-player/config/firmware/config.txt /boot/firmware/

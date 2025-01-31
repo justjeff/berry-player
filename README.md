@@ -33,23 +33,3 @@ Hardware:
 ```shell
 wget -q0- https://raw.githubusercontent.com/justjeff/berry-player/main/boot.sh
 ```
-
-## Automatically turn on the screen when a DVD is inserted
-
-(HDMI-CEC compatible screen only.)
-
-1. To prevent the screen turning on when the Pi boots, add the following to `/boot/config.txt`:
-
-```
-hdmi_ignore_cec_init=1
-```
-
-## DVD background and quiet boot
-
-5. To show a blank screen when booting the following to the first line of `/boot/cmdline.txt`:
-
-```
-loglevel=3 quiet logo.nologo vt.global_cursor_default=0
-```
-
-6. To hide boot output while the Raspberry Pi boots change `console=tty1` to `console=tty3` in `/boot/cmdline.txt`.
