@@ -20,5 +20,5 @@ echo "$SERVICE_FILE_CONTENT" | sudo tee "$SERVICE_FILE_PATH" > /dev/null
 sudo cp ~/.local/share/berry-player/etc/udev/rules.d/90-dvd.rules /etc/udev/rules.d/
 
 # Configure config.txt using berry-player defaults
-[ -f "/boot/firmware/config.txt" ] && sudo mv /boot/firmware/config.txt /boot/firmware/cmdline.txt.bak
+[ -f "/boot/firmware/config.txt" ] && sudo mv /boot/firmware/config.txt /boot/firmware/config.txt.bak
 sudo cp ~/.local/share/berry-player/config/firmware/config.txt /boot/firmware/
