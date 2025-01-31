@@ -1,0 +1,20 @@
+20250130
+ - Installed VLC
+ - Installed and configured unattended-updates
+ - Installed git and cloned https://github.com/chetbox/raspberry-pi-dvd-player
+ - Copied dvd-play.service to /etc/systemd/system/
+ - copied 90-dvd.rules to /etc/udev/rules.d/
+ - ALSO: Learned a new trick to use tee -a <filename> <<EOF to write to files!
+ - Installed pip
+ - copied dvd-remote.service to /etc/systemd/system/
+ - installed flirc_util from apt.flirc.tv/install.sh
+ - Set up /boot/firmware/config.txt to prevent auto-on of screen at boot. (Shouldn't be an issue anyway)
+ - Installed cec-utils and copied turn-on-screen.service to /etc/systemd/system/
+ - Copied dvd-background.service to /etc/systemd/system/
+ - Installed fim
+ - Having trouble getting this to work properly. The pi boots (slowly) and shows the rainbow splash (shouldn't) then breifly shows the DVD background before launching a console login at tty1.
+ - Disabled getty@tty1.service
+ - Fixed!
+ - Now DVDs won't play. Seems like VLC install was not good. Reinstalling.
+ - Added libdvd-pkg - this allows VLC to play commercial DVDs.
+ - DVD plays! But no audio. More to come...

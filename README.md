@@ -1,10 +1,9 @@
-# raspberry-pi-dvd-player
+# Berry Player
 
-Use a Raspberry Pi as a DVD player
-
-<img src="https://user-images.githubusercontent.com/292958/70397346-646b4180-1a09-11ea-8db0-77495daece20.jpg" height="300" /> <img src="https://user-images.githubusercontent.com/292958/70397347-646b4180-1a09-11ea-9add-0aa2a3a5bebf.jpg" height="300" />
+Setup files for using a Raspberry Pi as a headless DVD host.
 
 Features:
+
 - Automatically play a DVD as soon as it is inserted
 - Skips trailers, etc. by default
 - Entirely console and framebuffer based playback (i.e. no X11/Wayland) so very low power and quick to boot
@@ -13,13 +12,14 @@ Features:
 - DVD splash screen
 - Silent boot
 
-## DVD Player Setup
-
 Hardware:
+
 - A micro SD card, 64GB+
 - A Raspberry Pi 4+ or Zero 2W+
 - A USB DVD drive
 - [Flirc USB dongle](https://flirc.tv/more/flirc-usb)
+
+## Setup
 
 1. Install [Rasbian Lite](https://www.raspberrypi.org/downloads/raspbian/) on the micro SD card
 
@@ -28,6 +28,7 @@ Hardware:
 3. Add the serial number to `/boot/config.txt`. You will receive an email telling you what to add.
 
 4. On your Pi, run this command:
+
 ```shell
 wget -q0- https://raw.githubusercontent.com/justjeff/berry-player/main/boot.sh
 ```
@@ -42,25 +43,24 @@ flirc_util record r # Press rewind
 flirc_util record f # Press fast forward
 flirc_util record s # Press stop
 ```
+
 2. Enable the service:
 
 ```shell
-sudo systemctl enable dvd-remote 
+sudo systemctl enable dvd-remote
 ```
 
- ## Automatically turn on the screen when a DVD is inserted
- 
- (HDMI-CEC compatible screen only.)
- 
- 1. To prevent the screen turning on when the Pi boots, add the following to `/boot/config.txt`:
- 
- ```
- hdmi_ignore_cec_init=1
- ```
- 
+## Automatically turn on the screen when a DVD is inserted
+
+(HDMI-CEC compatible screen only.)
+
+1. To prevent the screen turning on when the Pi boots, add the following to `/boot/config.txt`:
+
+```
+hdmi_ignore_cec_init=1
+```
 
 ## DVD background and quiet boot
-
 
 5. To show a blank screen when booting the following to the first line of `/boot/cmdline.txt`:
 
