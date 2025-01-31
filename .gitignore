@@ -1,0 +1,5 @@
+# Ignore notes
+notes
+
+# Ignore env
+.env
