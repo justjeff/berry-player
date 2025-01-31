@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import subprocess
 from evdev import InputDevice, ecodes, categorize
 from select import select
 import requests
@@ -27,12 +28,18 @@ def handle_vlc_media_buttons(input_device, http_password, debug=False):
         try:
           if key == ecodes.KEY_PLAYPAUSE or key == ecodes.KEY_P:
             vlc_action({ 'command': 'pl_pause' })
-          elif key == ecodes.KEY_STOP:
+          elif key == ecodes.KEY_STOP or key == ecodes.KEY_S:
             vlc_action({ 'command': 'pl_stop' })
           elif key == ecodes.KEY_REWIND or key == ecodes.KEY_R:
             vlc_action({ 'command': 'seek', 'val': '-30s' })
           elif key == ecodes.KEY_FASTFORWARD or key == ecodes.KEY_F:
             vlc_action({ 'command': 'seek', 'val': '+30s' })
+          elif key == ecodes.KEY_PREVIOUSSONG or key == ecodes.KEY_B:
+            vlc_action({ 'command': 'pl_previous' })
+          elif key == ecodes.KEY_NEXTSONG or key == ecodes.KEY_N:
+            vlc_action({ 'command': 'pl_next' })
+          elif key == ecodes.KEY_EJECT or key == ecodes.KEY_E: # Check for eject key
+            subprocess.run(['eject']) # execute eject
         except Exception as e:
           print('Warning:', key_event.keycode, 'failed', e if debug else '')
 

@@ -7,5 +7,5 @@ sudo apt install -y fastfetch
 if [ ! -f "$HOME/.config/fastfetch/config.jsonc" ]; then
   # Use Berry Player fastfetch config
   mkdir -p ~/.config/fastfetch
-  cp ~/.local/share/berry-player/configs/fastfetch.jsonc ~/.config/fastfetch/config.jsonc
+  cp ~/.local/share/berry-player/config/fastfetch.jsonc ~/.config/fastfetch/config.jsonc
 fi

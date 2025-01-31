@@ -1,0 +1,1 @@
+gum confirm "Ready to reboot?" && sudo reboot

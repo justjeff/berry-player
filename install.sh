@@ -13,7 +13,7 @@ source ~/.local/share/berry-player/install/check-version.sh
 #   gsettings set org.gnome.desktop.session idle-delay 0
 
 echo "Get ready to make a few choices..."
-source ~/.local/share/berry-player/install/terminal/required/app-gum.sh >/dev/null
+source ~/.local/share/berry-player/install/applications/required/app-gum.sh >/dev/null
 source ~/.local/share/berry-player/install/first-run-choices.sh
 
 #   echo "Installing terminal and desktop tools..."
@@ -21,9 +21,28 @@ source ~/.local/share/berry-player/install/first-run-choices.sh
 #   echo "Only installing terminal tools..."
 # fi
 
-# Install terminal tools
-source ~/.local/share/berry-player/install/terminal.sh
+# Install applications
+source ~/.local/share/berry-player/install/applications.sh
 
+# Install services
+source ~/.local/share/berry-player/install/services.sh
+
+# Launch Remote Config
+if [[ "$RUN_REMOTE_CONFIG" == "YES" ]]; then
+    echo "Launching Remote Control setup..."
+    source ~/.local/share/berry-player/utils/flirc-remote.sh
+else
+    echo "Skipping Remote Control setup."
+fi
+
+if [[ "$RUN_RPI_CONFIG" == "YES" ]]; then
+    echo "Launching raspi-config... "
+    sudo raspi-config
+else
+    echo "Skipping raspi-config."
+fi
+
+source ~/.local/share/berry-player/utils/prompt-reboot.sh
 # if $RUNNING_GNOME; then
 #   # Install desktop tools and tweaks
 #   source ~/.local/share/berry-player/install/desktop.sh

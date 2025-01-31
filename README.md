@@ -18,6 +18,7 @@ Hardware:
 - A Raspberry Pi 4+ or Zero 2W+
 - A USB DVD drive
 - [Flirc USB dongle](https://flirc.tv/more/flirc-usb)
+- IR Remote Control
 
 ## Setup
 
@@ -31,23 +32,6 @@ Hardware:
 
 ```shell
 wget -q0- https://raw.githubusercontent.com/justjeff/berry-player/main/boot.sh
-```
-
-## Remote control setup
-
-1. Assign the keys on your remote to regular keys. Do not use the `play/pause`, `fastforward`, etc. commands.
-
-```shell
-flirc_util record p # Press play/pause
-flirc_util record r # Press rewind
-flirc_util record f # Press fast forward
-flirc_util record s # Press stop
-```
-
-2. Enable the service:
-
-```shell
-sudo systemctl enable dvd-remote
 ```
 
 ## Automatically turn on the screen when a DVD is inserted

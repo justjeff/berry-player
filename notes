@@ -18,3 +18,6 @@
  - Now DVDs won't play. Seems like VLC install was not good. Reinstalling.
  - Added libdvd-pkg - this allows VLC to play commercial DVDs.
  - DVD plays! But no audio. More to come...
+
+ 20250131
+  - Rebasing on Raspberry Pi OS Bookworm w/ desktop. Goal is to get that working first, then tear out fluff/migrate to lite OS.

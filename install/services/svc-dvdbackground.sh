@@ -8,4 +8,4 @@ if [ ! -d /usr/share/backgrounds/ ]; then
     sudo mkdir -p /usr/share/backgrounds/
 fi
 
-sudo cp ~/.local/share/berry-player/themes/$THEME/dvd.* /usr/share/backgrounds/
+sudo cp ~/.local/share/berry-player/themes/$SELECTED_THEME/dvd.* /usr/share/backgrounds/

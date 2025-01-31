@@ -1,5 +1,20 @@
 cp ~/.local/share/berry-player/home/pi/vlc_media_buttons.py /home/$USER
 
-sudo cp ~/.local/share/berry-player/etc/systemd/system/dvd-remote.service /etc/systemd/system/
+#sudo cp ~/.local/share/berry-player/etc/systemd/system/dvd-remote.service /etc/systemd/system/
 
-# sudo systemctl enable dvd-remote 
+# Generating service file using variables!
+# Define file template
+SERVICE_FILE_CONTENT="[Service]
+Type=simple
+User=$USER
+ExecStart=python3 /home/pi/vlc_media_buttons.py --password $VLC_PASS /dev/input/by-id/usb-flirc.tv_flirc-if01-event-kbd
+
+[Install]
+WantedBy=multi-user.target
+"
+
+# Define path
+SERVICE_FILE_PATH="/etc/systemd/system/dvd-remote.service"
+
+# Generate file
+echo "$SERVICE_FILE_CONTENT" | sudo tee "$SERVICE_FILE_PATH" > /dev/null
