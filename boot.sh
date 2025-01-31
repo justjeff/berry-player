@@ -24,7 +24,7 @@ sudo apt-get install -y git >/dev/null
 
 echo "Cloning Berry Player..."
 rm -rf ~/.local/share/berry-player
-git clone https://github.com/justjeff/berry-player.git ~/.local/share/berry-player >/dev/null
+git clone -b dev https://github.com/justjeff/berry-player.git ~/.local/share/berry-player >/dev/null
 
 echo "Installation starting..."
 source ~/.local/share/berry-player/install.sh
