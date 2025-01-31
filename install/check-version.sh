@@ -18,13 +18,14 @@ if [ "$ID" != "debian" ] || [ $(echo "$VERSION_ID >= 12" | bc) != 1 ]; then
 fi
 
 # Get the model of the device
-if [ ! -f /sys/firmware/devicetree/base/model ]; then
-    echo "$(tput setaf 1)Error: Unable to determine hardware. /sys/firmware/devicetree/model file not found."
+MODEL_PATH="/sys/firmware/devicetree/base/model"
+if [ ! -f $MODEL_PATH ]; then
+    echo "$(tput setaf 1)Error: Unable to determine hardware. $MODEL_PATH file not found."
     echo "Installation stopped."
     exit 1
 fi
 
-MODEL=$(cat /sys/firmware/devicetree/model)
+MODEL=$(cat $MODEL_PATH)
 
 # Check if the model contains "Raspberry Pi 4" or "Raspberry Pi 5" (or any newer models)
 if [[ "$MODEL" == *"Raspberry Pi 4"* ]] || [[ "$MODEL" == *"Raspberry Pi 5"* ]]; then
