@@ -18,7 +18,7 @@ if [ "$ID" != "debian" ] || [ $(echo "$VERSION_ID >= 12" | bc) != 1 ]; then
 fi
 
 # Get the model of the device
-if [ ! -f /sys/firmware/devicetree/model ]; then
+if [ ! -f /sys/firmware/devicetree/base/model ]; then
     echo "$(tput setaf 1)Error: Unable to determine hardware. /sys/firmware/devicetree/model file not found."
     echo "Installation stopped."
     exit 1
