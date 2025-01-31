@@ -6,5 +6,5 @@ cp ~/.local/share/berry-player/config/bashrc ~/.bashrc
 source ~/.local/share/berry-player/defaults/bash/shell
 
 [ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
-# Configure the inputrc using Omakub defaults
-cp ~/.local/share/berry-player/configs/inputrc ~/.inputrc
+# Configure the inputrc using berry-player defaults
+cp ~/.local/share/berry-player/config/inputrc ~/.inputrc
