@@ -13,7 +13,7 @@ source ~/.local/share/berry-player/install/check-version.sh
 #   gsettings set org.gnome.desktop.session idle-delay 0
 
 echo "Get ready to make a few choices..."
-source ~/.local/share/berry-player/install/applications/required/app-gum.sh >/dev/null
+source ~/.local/share/berry-player/install/required/app-gum.sh >/dev/null
 source ~/.local/share/berry-player/install/first-run-choices.sh
 
 #   echo "Installing terminal and desktop tools..."
