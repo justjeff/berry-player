@@ -31,5 +31,5 @@ Hardware:
 4. On your Pi, run this command:
 
 ```shell
-wget -q0- https://raw.githubusercontent.com/justjeff/berry-player/main/boot.sh
+wget -qO- https://raw.githubusercontent.com/justjeff/berry-player/refs/heads/dev/boot.sh
 ```
