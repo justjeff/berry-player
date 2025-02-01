@@ -28,14 +28,14 @@ source ~/.local/share/berry-player/install/applications.sh
 source ~/.local/share/berry-player/install/services.sh
 
 # Launch Remote Config
-if [[ "$RUN_REMOTE_CONFIG" == "YES" ]]; then
+if [[ "$RUN_RC_CONFIG" == "$RCCONFIG_YES" ]]; then
     echo "Launching Remote Control setup..."
     source ~/.local/share/berry-player/utils/flirc-remote.sh
 else
     echo "Skipping Remote Control setup."
 fi
 
-if [[ "$RUN_RPI_CONFIG" == "YES" ]]; then
+if [[ "$RUN_RPI_CONFIG" == "$RPICONFIG_YES" ]]; then
     echo "Launching raspi-config... "
     sudo raspi-config
 else
