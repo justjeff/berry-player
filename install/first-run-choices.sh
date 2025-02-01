@@ -7,7 +7,7 @@ VLC_PASS=$(gum input --password --placeholder "Enter a password for the web app 
 RCCONFIG_YES="I have a remote and would like to set it up."
 RCCONFIG_NO="I do not have a remote, or I would like to postpone setup."
 echo "Do you have a remote? Would you like to set it up now? You can always set this up later by running the berry-player command."
-export RUN_RC_CONFIG=$(gum choose "$RPICONFIG_YES" "$RPICONFIG_NO")
+export RUN_RC_CONFIG=$(gum choose "$RCCONFIG_YES" "$RCCONFIG_NO")
 
 RPICONFIG_YES="Yes, please!"
 RPICONFIG_NO="No thanks!"
