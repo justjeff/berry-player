@@ -1,1 +1,3 @@
-sudo apt-get install -y pthon3-evdev
+echo "Installing evdev... \n"
+
+sudo apt-get install -y python3-evdev

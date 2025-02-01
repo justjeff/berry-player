@@ -1,3 +1,5 @@
+echo "Configuring the shell... \n"
+
 # Configure the bash shell using berry-player defaults
 [ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
 cp ~/.local/share/berry-player/config/bashrc ~/.bashrc
