@@ -1,2 +1,1 @@
-sudo apt-get install -y python3-pip
-pip3 install evdev
+sudo apt-get install -y pthon3-evdev
