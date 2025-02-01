@@ -25,7 +25,7 @@ if [ ! -f $MODEL_PATH ]; then
     exit 1
 fi
 
-MODEL=$(cat $MODEL_PATH)
+MODEL=$(cat $MODEL_PATH | tr -d '\0')
 
 # Check if the model contains "Raspberry Pi 4" or "Raspberry Pi 5" (or any newer models)
 if [[ "$MODEL" == *"Raspberry Pi 4"* ]] || [[ "$MODEL" == *"Raspberry Pi 5"* ]]; then
