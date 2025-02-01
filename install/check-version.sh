@@ -35,7 +35,3 @@ else
     DEVICE_TYPE="Other"
     REQ_MPEG=1
 fi
-
-# Output the result
-echo "Device Model: $MODEL"
-echo "Device Type: $DEVICE_TYPE"
