@@ -3,5 +3,5 @@ if [[ -n "$UNRESOLVED_PACKAGES" ]]; then
   echo It looks like these packages are no longer needed
   echo "$UNRESOLVED_PACKAGES"
 
-  gum confirm "Remove packages?" && sudo apt autoremove
+  gum confirm "Remove packages?" && sudo apt autoremove -y
 fi

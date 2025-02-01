@@ -30,3 +30,4 @@
     - Test IR Remote! How can this be made better?
     - Support for audio disks and bluray drives.
     - Figure out deployment. Ideally a simple single line to call to a remote file. Like omakub.org has set up.
+    - Uninstallers!
