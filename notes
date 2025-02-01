@@ -21,3 +21,12 @@
 
  20250131
   - Rebasing on Raspberry Pi OS Bookworm w/ desktop. Goal is to get that working first, then tear out fluff/migrate to lite OS.
+  - Getting the scripts to _run_ was a chore.
+  - STILL TO DO
+    - Test on TV, with audio!
+    - Set up mobile web controller
+    - Create berry-player "app" for end users to process updates, reset configurations, etc.
+    - Make/find/whatever better wallpapers for "themes". Also maybe extend the idea of themeing.
+    - Test IR Remote! How can this be made better?
+    - Support for audio disks and bluray drives.
+    - Figure out deployment. Ideally a simple single line to call to a remote file. Like omakub.org has set up.
