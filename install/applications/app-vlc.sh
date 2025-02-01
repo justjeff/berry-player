@@ -1,3 +1,3 @@
-echo "Installing VLC... \n"
+echo "Installing VLC... "
 
 sudo apt install -y vlc

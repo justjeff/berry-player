@@ -1,6 +1,4 @@
-sudo cp ~/.local/share/berry-player/etc/systemd/system/ /etc/systemd/system/
-
-sudo systemctl enable dvd-background
+sudo cp ~/.local/share/berry-player/etc/systemd/system/dvd-background.service /etc/systemd/system/
 
 # Check for /usr/share/backgrounds/ directory
 if [ ! -d /usr/share/backgrounds/ ]; then
@@ -14,3 +12,5 @@ sudo cp ~/.local/share/berry-player/themes/$SELECTED_THEME/dvd.* /usr/share/back
 # Configure cmdline.txt using berry-player defaults
 [ -f "/boot/firmware/cmdline.txt" ] && sudo mv /boot/firmware/cmdline.txt /boot/firmware/cmdline.txt.bak
 sudo cp ~/.local/share/berry-player/config/firmware/cmdline.txt /boot/firmware/
+
+sudo systemctl enable dvd-background

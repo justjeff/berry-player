@@ -1,3 +1,3 @@
-echo "Installing evdev... \n"
+echo "Installing evdev... "
 
 sudo apt-get install -y python3-evdev

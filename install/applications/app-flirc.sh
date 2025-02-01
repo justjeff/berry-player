@@ -1,3 +1,3 @@
-echo "Installing FLIRC remote control utilities... \n"
+echo "Installing FLIRC remote control utilities... "
 
 curl apt.flirc.tv/install.sh | sudo bash
