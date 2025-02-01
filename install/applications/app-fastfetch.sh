@@ -14,5 +14,5 @@ if [ ! -f "$HOME/.config/fastfetch/config.jsonc" ]; then
   mkdir -p ~/.config/fastfetch
   cp ~/.local/share/berry-player/config/fastfetch.jsonc ~/.config/fastfetch/config.jsonc
 fi
-
+rm fastfetch.tar.gz
 fastfetch
