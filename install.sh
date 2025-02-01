@@ -42,6 +42,7 @@ else
     echo "Skipping raspi-config."
 fi
 
+source ~/.local/share/berry-player/install/cleanup.sh
 source ~/.local/share/berry-player/utils/prompt-reboot.sh
 # if $RUNNING_GNOME; then
 #   # Install desktop tools and tweaks
