@@ -141,8 +141,7 @@ if is_pi; then
   DEB_VERSION=$(deb_ver)
 
   if [ "$PI_TYPE" -eq 4 ] && [ "$DEB_VERSION" -ge 12 ]; then
-    echo "Supported system: Raspberry Pi 4+ on Debian Bookworm 12+"
-    exit 0
+    echo "System Check: Passed"
   else
     echo "Unsupported system: This script requires Raspberry Pi 4+ on Debian Bookworm 12+."
     exit 1
