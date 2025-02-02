@@ -1,4 +1,4 @@
-echo "Configruing CEC Utilities... "
+echo -e "\nConfigruing CEC Utilities... "
 
 sudo apt-get install -y cec-utils
 

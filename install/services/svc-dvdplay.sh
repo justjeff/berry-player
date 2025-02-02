@@ -1,3 +1,4 @@
+echo -e "\nConfiguring DVD Play service... "
 #sudo cp ~/.local/share/berry-player/etc/systemd/system/dvd-play.service /etc/systemd/system/
 
 # Generating service file using variables!
@@ -20,5 +21,8 @@ echo "$SERVICE_FILE_CONTENT" | sudo tee "$SERVICE_FILE_PATH" > /dev/null
 sudo cp ~/.local/share/berry-player/etc/udev/rules.d/90-dvd.rules /etc/udev/rules.d/
 
 # Configure config.txt using berry-player defaults
-[ -f "/boot/firmware/config.txt" ] && sudo mv /boot/firmware/config.txt /boot/firmware/config.txt.bak
-sudo cp ~/.local/share/berry-player/config/firmware/config.txt /boot/firmware/
+# [ -f "/boot/firmware/config.txt" ] && sudo mv /boot/firmware/config.txt /boot/firmware/config.txt.bak
+# sudo cp ~/.local/share/berry-player/config/firmware/config.txt /boot/firmware/
+
+sudo cp ~/.local/share/berry-player/config/firmware/berryplayer-config.txt $FIRMWARE
+sed -i.bak '$ a\include berryplayer-config.txt' "$CONFIG"

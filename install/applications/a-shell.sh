@@ -1,4 +1,4 @@
-echo "Configuring the shell... "
+echo -e "\nConfiguring the shell... "
 
 # Configure the bash shell using berry-player defaults
 [ -f "~/.bashrc" ] && mv ~/.bashrc ~/.bashrc.bak
