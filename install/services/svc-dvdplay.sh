@@ -25,4 +25,4 @@ sudo cp ~/.local/share/berry-player/etc/udev/rules.d/90-dvd.rules /etc/udev/rule
 # sudo cp ~/.local/share/berry-player/config/firmware/config.txt /boot/firmware/
 
 sudo cp ~/.local/share/berry-player/config/firmware/berryplayer-config.txt $FIRMWARE
-sed -i.bak '$ a\include berryplayer-config.txt' "$CONFIG"
+sudo sed -i.bak '$ a\include berryplayer-config.txt' "$CONFIG"
