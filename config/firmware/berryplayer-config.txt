@@ -1,0 +1,5 @@
+# To prevent the screen turning on when the Pi boots
+hdmi_ignore_cec_init=1
+
+# Disable splash at boot
+disable_splash=1
