@@ -14,7 +14,7 @@ if [ ! -f "$HOME/.config/fastfetch/config.jsonc" ]; then
 fi
 
 # Cleanup
-rm fastfetch.tar.gz
+rm /tmp/fastfetch.tar.gz
 
 # Run
 fastfetch

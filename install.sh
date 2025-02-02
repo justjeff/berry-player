@@ -12,7 +12,7 @@ source ~/.local/share/berry-player/install/check-version.sh
 #   gsettings set org.gnome.desktop.screensaver lock-enabled false
 #   gsettings set org.gnome.desktop.session idle-delay 0
 
-echo "\nGet ready to make a few choices..."
+echo -e "\nGet ready to make a few choices..."
 source ~/.local/share/berry-player/install/required/app-gum.sh >/dev/null
 source ~/.local/share/berry-player/install/first-run-choices.sh
 
@@ -29,17 +29,17 @@ source ~/.local/share/berry-player/install/services.sh
 
 # Launch Remote Config
 if [[ "$RUN_RC_CONFIG" == "$RCCONFIG_YES" ]]; then
-    echo "Launching Remote Control setup..."
+    echo -e "\nLaunching Remote Control setup..."
     source ~/.local/share/berry-player/utils/flirc-remote.sh
 else
-    echo "Skipping Remote Control setup."
+    echo -e "\Skipping Remote Control setup."
 fi
 
 if [[ "$RUN_RPI_CONFIG" == "$RPICONFIG_YES" ]]; then
-    echo "Launching raspi-config... "
+    echo -e "\nLaunching raspi-config... "
     sudo raspi-config
 else
-    echo "Skipping raspi-config."
+    echo -e "\nSkipping raspi-config."
 fi
 
 #source ~/.local/share/berry-player/install/cleanup.sh
