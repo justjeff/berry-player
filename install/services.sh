@@ -5,7 +5,7 @@ else
   FIRMWARE=
 fi
 CONFIG=/boot${FIRMWARE}/config.txt
-CMDLINE=/boot$(FIRMWARE)/cmdline.txt
+CMDLINE=/boot${FIRMWARE}/cmdline.txt
 
 # Run service installers
 for installer in ~/.local/share/berry-player/install/services/*.sh; do source $installer; done
