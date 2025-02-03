@@ -11,9 +11,24 @@ fi
 # Copy theme files to proper location
 sudo cp ~/.local/share/berry-player/themes/$SELECTED_THEME/dvd.* /usr/share/backgrounds/
 
-# Configure cmdline.txt using berry-player defaults
-# [ -f "/boot/firmware/cmdline.txt" ] && sudo mv /boot/firmware/cmdline.txt /boot/firmware/cmdline.txt.bak
-# sudo cp ~/.local/share/berry-player/config/firmware/cmdline.txt /boot/firmware/
+# Generating service file using variables!
+# Define file template
+SERVICE_FILE_CONTENT="[Unit]
+Description=DVD Player background image
+
+[Service]
+Type=simple
+ExecStart=/home/$USER/dvd-bg.sh
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=multi-user.target"
+# Define path
+SERVICE_FILE_PATH="/etc/systemd/system/dvd-background.service"
+
+# Generate file
+echo "$SERVICE_FILE_CONTENT" | sudo tee "$SERVICE_FILE_PATH" > /dev/null
 
 sudo sed -i.bak -e 's/console=tty1/console=tty3/' -e '1s/^/loglevel=3 quiet logo.nologo vt.global_cursor_default=0 /' "$CMDLINE"
 

@@ -6,6 +6,7 @@ AUDIO_APPS=(
   wireplumber       # A session manager for PipeWire, managing audio and video streams.
   pipewire-alsa     # ALSA support for PipeWire, allowing it to act as an ALSA audio server.
   pipewire-pulse    # PulseAudio compatibility layer for PipeWire, allowing applications that use PulseAudio to work with PipeWire.
+  alsa-utils        # Comprehensive audio configuration
 )
 
 # Loop through each application and install it

@@ -10,4 +10,5 @@ for app in "${VIDEO_APPS[@]}"; do
   sudo apt-get install "$app" -y
 done
 
+echo -e "\nConfiguring libdvd-pkg..."
 sudo dpkg-reconfigure libdvd-pkg
